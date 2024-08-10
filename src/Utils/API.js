@@ -26,7 +26,14 @@ const getUserCart = async (userId) => {
     return datas
 }
 
+const getUser = async (userId) =>{
+    const res = await axios.get(`https://fakestoreapi.com/users/${userId}`);
+    const datas = res.data;
+
+    return datas
+}
 
 
 
-export { getProducts, getAllUsers, getAllCarts, getUserCart }
+
+export { getProducts, getAllUsers, getAllCarts, getUserCart, getUser }

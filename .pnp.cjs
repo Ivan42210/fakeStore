@@ -44,6 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.3.1"],\
             ["react-dom", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:18.3.1"],\
+            ["react-responsive", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:10.0.0"],\
             ["react-router-dom", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:6.25.1"],\
             ["vite", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:5.3.5"]\
           ],\
@@ -2051,6 +2052,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["css-mediaquery", [\
+        ["npm:0.1.2", {\
+          "packageLocation": "./.yarn/cache/css-mediaquery-npm-0.1.2-39b61fbcad-8e26ae52d8.zip/node_modules/css-mediaquery/",\
+          "packageDependencies": [\
+            ["css-mediaquery", "npm:0.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["csstype", [\
         ["npm:3.1.3", {\
           "packageLocation": "./.yarn/cache/csstype-npm-3.1.3-e9a1c85013-8db785cc92.zip/node_modules/csstype/",\
@@ -2691,6 +2701,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.3.1"],\
             ["react-dom", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:18.3.1"],\
+            ["react-responsive", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:10.0.0"],\
             ["react-router-dom", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:6.25.1"],\
             ["vite", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:5.3.5"]\
           ],\
@@ -3147,6 +3158,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["https-proxy-agent", "npm:7.0.5"],\
             ["agent-base", "npm:7.1.1"],\
             ["debug", "virtual:1ff4b5f90832ba0a9c93ba1223af226e44ba70c1126a3740d93562b97bc36544e896a5e95908196f7458713e6a6089a34bfc67362fc6df7fa093bd06c878be47#npm:4.3.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["hyphenate-style-name", [\
+        ["npm:1.1.0", {\
+          "packageLocation": "./.yarn/cache/hyphenate-style-name-npm-1.1.0-9ef705067a-b9ed74e291.zip/node_modules/hyphenate-style-name/",\
+          "packageDependencies": [\
+            ["hyphenate-style-name", "npm:1.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3767,6 +3787,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["matchmediaquery", [\
+        ["npm:0.4.2", {\
+          "packageLocation": "./.yarn/cache/matchmediaquery-npm-0.4.2-9ff26bf499-0d495dd20a.zip/node_modules/matchmediaquery/",\
+          "packageDependencies": [\
+            ["matchmediaquery", "npm:0.4.2"],\
+            ["css-mediaquery", "npm:0.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["mime-db", [\
         ["npm:1.52.0", {\
           "packageLocation": "./.yarn/cache/mime-db-npm-1.52.0-b5371d6fd2-0d99a03585.zip/node_modules/mime-db/",\
@@ -4352,6 +4382,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-responsive", [\
+        ["npm:10.0.0", {\
+          "packageLocation": "./.yarn/cache/react-responsive-npm-10.0.0-c76dbe003b-49580f3fd3.zip/node_modules/react-responsive/",\
+          "packageDependencies": [\
+            ["react-responsive", "npm:10.0.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:10.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/react-responsive-virtual-c51b09032c/0/cache/react-responsive-npm-10.0.0-c76dbe003b-49580f3fd3.zip/node_modules/react-responsive/",\
+          "packageDependencies": [\
+            ["react-responsive", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:10.0.0"],\
+            ["@types/react", "npm:18.3.3"],\
+            ["hyphenate-style-name", "npm:1.1.0"],\
+            ["matchmediaquery", "npm:0.4.2"],\
+            ["prop-types", "npm:15.8.1"],\
+            ["react", "npm:18.3.1"],\
+            ["shallow-equal", "npm:3.1.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-router", [\
         ["npm:6.25.1", {\
           "packageLocation": "./.yarn/cache/react-router-npm-6.25.1-63bb35966d-2abbab5ecc.zip/node_modules/react-router/",\
@@ -4651,6 +4707,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["es-errors", "npm:1.3.0"],\
             ["functions-have-names", "npm:1.2.3"],\
             ["has-property-descriptors", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["shallow-equal", [\
+        ["npm:3.1.0", {\
+          "packageLocation": "./.yarn/cache/shallow-equal-npm-3.1.0-24ff83f6af-7eab4ae9fb.zip/node_modules/shallow-equal/",\
+          "packageDependencies": [\
+            ["shallow-equal", "npm:3.1.0"]\
           ],\
           "linkType": "HARD"\
         }]\
