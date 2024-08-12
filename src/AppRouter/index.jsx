@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthContext";
 import Profile from "../Pages/Profile";
 
+
 export default function AppRouter(){
 
     const {token, user} = useContext(AuthContext);
@@ -20,7 +21,7 @@ export default function AppRouter(){
             <Routes>
                 <Route path={'/'} element={<Home />}/>
                 <Route path={'/test'} element={<Test/>} />
-                <Route path='/profile/:id' element={token ? <Profile/> : <Navigate to='/test' />}/>
+                <Route path='/profile/:id' element={token ? <Profile/> : <Navigate to='/' />}/>
             </Routes> 
         </>
     )

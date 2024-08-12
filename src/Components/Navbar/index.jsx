@@ -4,9 +4,18 @@ import Typography from '@mui/material/Typography';
 import { useContext } from 'react';
 import {NavLink} from 'react-router-dom'
 import { AuthContext } from '../../AuthContext';
-import { Disconnect } from '../Disconnect';
+import UserNavMenu from '../UserNavMenu';
+import SignInToggle from '../SignInToggle';
 
 
+
+export default function Navbar() {
+
+
+    const {user} = useContext(AuthContext)
+
+
+    
 const menu = [{
     label: 'Home',
     link: '/'
@@ -16,9 +25,12 @@ const menu = [{
    link: '/test' 
 }]
 
-export default function Navbar() {
+const navMenuItems =[{
+    item: 'Profile',
+    link: user ? `/profile/${user.id}` : '/',
+}]
 
-    const {user} = useContext(AuthContext)
+//<Button href={'/signin'} variant='contained'>Sign in</Button>
 
     return(
         <>
@@ -34,7 +46,9 @@ export default function Navbar() {
                             </NavLink>
                         ))
                     }
-                  <Disconnect/>  
+                  {
+                    user ? <UserNavMenu navMenuItems={navMenuItems}/>  : <SignInToggle />
+                  }
                 </Box>
             </AppBar>
         </>
