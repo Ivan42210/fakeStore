@@ -28,6 +28,9 @@ const menu = [{
 const navMenuItems =[{
     item: 'Profile',
     link: user ? `/profile/${user.id}` : '/',
+},{
+    item: 'Cart',
+    link: '/cart',
 }]
 
 //<Button href={'/signin'} variant='contained'>Sign in</Button>

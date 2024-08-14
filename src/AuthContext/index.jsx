@@ -2,13 +2,14 @@ import axios from 'axios';
 import { createContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { jwtDecode } from 'jwt-decode';
-import { getUser } from '../Utils/API';
+import { getUser, getUserCart } from '../Utils/API';
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
     const [token, setToken] = useState(null);
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState(null);
+    const [cart, setCart] = useState(null);
 
 
     useEffect(()=> {
@@ -16,6 +17,7 @@ export const AuthProvider = ({children}) => {
         if (savedToken) {
             setToken(savedToken);
             fetchUser(savedToken);
+            fetchCart(savedToken)
         }
     },[]);
 
@@ -52,9 +54,21 @@ export const AuthProvider = ({children}) => {
         }
     }
 
+    const fetchCart = async(token) =>{
+        try{
+            const decoded = jwtDecode(token);
+            const userId = decoded.sub;
+            const userCart = await getUserCart(userId);
+            setCart(userCart)
+
+        } catch (error){
+            console.error("Failed to fetch user data", error)
+        }
+    }
+
 
     return(
-        <AuthContext.Provider value={{token, login, logout, user}}>
+        <AuthContext.Provider value={{token, login, logout, user, cart}}>
             {children}
         </AuthContext.Provider>
     )

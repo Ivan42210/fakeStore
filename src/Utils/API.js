@@ -7,6 +7,12 @@ const getProducts = async () => {
     return datas
 }
 
+const getSingleProduct = async (productId) => {
+    const res = await axios.get(`https://fakestoreapi.com/products/${productId}`)
+    const datas = res.data;
+    return datas
+}
+
 
 const getAllUsers = async () => {
     const res = await axios.get('https://fakestoreapi.com/users');
@@ -36,4 +42,4 @@ const getUser = async (userId) =>{
 
 
 
-export { getProducts, getAllUsers, getAllCarts, getUserCart, getUser }
+export { getProducts, getAllUsers, getAllCarts, getUserCart, getUser, getSingleProduct }

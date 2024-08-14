@@ -5,15 +5,18 @@ import Test from "../Pages/Test";
 import { useContext } from "react";
 import { AuthContext } from "../AuthContext";
 import Profile from "../Pages/Profile";
+import Cart from "../Pages/Cart";
 
 
 export default function AppRouter(){
 
-    const {token, user} = useContext(AuthContext);
+    const {token, user, cart} = useContext(AuthContext);
 
     console.log("récupérer le token et l'utilisateur")
     console.log(token)
     console.log(user)
+    console.log("récupération du panier de l'utilisateur")
+    console.log(cart)
 
     return(
         <>
@@ -22,6 +25,7 @@ export default function AppRouter(){
                 <Route path={'/'} element={<Home />}/>
                 <Route path={'/test'} element={<Test/>} />
                 <Route path='/profile/:id' element={token ? <Profile/> : <Navigate to='/' />}/>
+                <Route path='/cart' element={<Cart/>}/>
             </Routes> 
         </>
     )
