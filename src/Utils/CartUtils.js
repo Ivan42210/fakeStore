@@ -1,31 +1,28 @@
-import { getSingleProduct } from "./API"
-
-const createProductInfoArray = async (cart) => {
-    if (!cart || !cart.products || !Array.isArray(cart.products)) {
-        console.error("Cart ou ses produits sont indéfinis ou ne sont pas un tableau.");
+const transformCartToProducts = (cart) => {
+    if (!cart || cart.length === 0) {
+        console.error('Le panier est vide ou non défini');
         return [];
     }
 
-    try {
-        const productInfoArray = await Promise.all(
-            cart.products.map(async (item) => {
-                const productInfo = await getSingleProduct(item.productId);
-                return {
-                    id: productInfo.id,
-                    title: productInfo.title,
-                    image: productInfo.image,
-                    price: productInfo.price,
-                    quantity: item.quantity,
-                    date: item.date
-                };
-            })
-        );
-        return productInfoArray;
-    } catch (error) {
-        console.error("Erreur lors de la création du tableau d'informations des produits:", error);
-        return [];  // Retourne un tableau vide en cas d'erreur
-    }
+    return cart.flatMap(item => {
+        if (!item.products || item.products.length === 0) {
+            console.error('Item sans produits ou produits non défini');
+            return [];
+        }
+
+        const date = item.date;
+
+        return item.products.map(product => {
+            const productClean = {
+                productId: product.productId,
+                quantity: product.quantity,
+                date: date,
+            };
+
+           
+            return productClean;
+        });
+    });
 };
 
-
-export {createProductInfoArray}
+export {transformCartToProducts};
