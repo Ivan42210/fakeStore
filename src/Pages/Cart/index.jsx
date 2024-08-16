@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthContext';
@@ -12,6 +13,7 @@ export default function Cart(){
 
     const { cart } = useContext(AuthContext);  
     const [cartItems, setCartItems] = useState([]);
+    const [totalPrice, getTotalPrice] = useState(null)
    
     useEffect(() => {
         const set = async () => {
@@ -35,11 +37,14 @@ export default function Cart(){
     }, [cart]);
 
 
+
+
+
     return(
         <>
-            <Box component='main' sx={{maxWidth: '1200px', m: '0 auto'}}>
+            <Box component='main' sx={{maxWidth: '1200px', m: '0 auto', p:2}}>
                 <Typography variant='h3' color='primary' sx={{mt:2, textAlign: 'center'}}>Your cart</Typography>
-                <Box component='section' sx={{display: 'flex', flexDirection: 'column', gap: 1 }}>
+                <Paper component='section' sx={{display: 'flex', flexDirection: 'column', gap: 1, p:2, width: '60%' }}>
                     {cartItems.map(({image, title, price, category, quantity}, index) => (
                         <CartCard 
                             key={index}
@@ -50,7 +55,7 @@ export default function Cart(){
                             quantity={quantity}/>
                     )
                     )}
-                </Box>
+                </Paper>
             </Box>
         </>
     )
