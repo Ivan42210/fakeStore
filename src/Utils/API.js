@@ -27,7 +27,7 @@ const getAllCarts = async () => {
 }
 
 const getUserCart = async (userId) => {
-    const res = await axios.get(`https://fakestoreapi.com/carts/user/${userId}`);
+    const res = await axios.get(`https://fakestoreapi.com/carts/${userId}`);
     const datas = res.data;
     return datas
 }
