@@ -39,7 +39,29 @@ const getUser = async (userId) =>{
     return datas
 }
 
+const addUser = async (email, username,password, firstname,lastname,city,street,number,zipcode,lat,long) =>{
+    await axios.post('https://fakestoreapi.com/users', {
+        email:email,
+        username: username,
+        password: password,
+        name: {
+            firstname: firstname,
+            lastname: lastname
+        },
+        address: {
+            city: city,
+            street: street,
+            number: number,
+            zipcode: zipcode,
+            geolocation: {
+                lat: lat,
+                long: long
+            }
+        }
+    })
+}
 
 
 
-export { getProducts, getAllUsers, getAllCarts, getUserCart, getUser, getSingleProduct }
+
+export { getProducts, getAllUsers, getAllCarts, getUserCart, getUser, getSingleProduct, addUser }

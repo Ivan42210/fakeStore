@@ -41,6 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:4.6.2"],\
             ["eslint-plugin-react-refresh", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:0.4.9"],\
             ["jwt-decode", "npm:4.0.0"],\
+            ["opencage-api-client", "npm:1.0.7"],\
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.3.1"],\
             ["react-dom", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:18.3.1"],\
@@ -2040,6 +2041,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["cross-fetch", [\
+        ["npm:4.0.0", {\
+          "packageLocation": "./.yarn/cache/cross-fetch-npm-4.0.0-9c67668db4-ecca4f37ff.zip/node_modules/cross-fetch/",\
+          "packageDependencies": [\
+            ["cross-fetch", "npm:4.0.0"],\
+            ["node-fetch", "virtual:9c67668db478e95ba4d6a763bc55027eeff0d22eaf59478017ea07386fc33a3c7b7b625af78aa86a33991a9a500a7aa216e28632de568f02adefd662ef53a42d#npm:2.7.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["cross-spawn", [\
         ["npm:7.0.3", {\
           "packageLocation": "./.yarn/cache/cross-spawn-npm-7.0.3-e4ff3e65b3-671cc7c728.zip/node_modules/cross-spawn/",\
@@ -2196,6 +2207,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["dom-helpers", "npm:5.2.1"],\
             ["@babel/runtime", "npm:7.24.8"],\
             ["csstype", "npm:3.1.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["dotenv", [\
+        ["npm:16.4.5", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.4.5-bcb20eb95d-301a12c3d4.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:16.4.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2698,6 +2718,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-react-hooks", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:4.6.2"],\
             ["eslint-plugin-react-refresh", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:0.4.9"],\
             ["jwt-decode", "npm:4.0.0"],\
+            ["opencage-api-client", "npm:1.0.7"],\
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.3.1"],\
             ["react-dom", "virtual:3ba4da7a22239b993a4105c4f1a3867db34a12eff500da68f8a37ca648ee1c7787cc1cc03bb9e81095caec6a4eaaa46a3d68672b21b6ba036bc6ece33a090307#npm:18.3.1"],\
@@ -3967,6 +3988,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["node-fetch", [\
+        ["npm:2.7.0", {\
+          "packageLocation": "./.yarn/cache/node-fetch-npm-2.7.0-587d57004e-d76d2f5edb.zip/node_modules/node-fetch/",\
+          "packageDependencies": [\
+            ["node-fetch", "npm:2.7.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:9c67668db478e95ba4d6a763bc55027eeff0d22eaf59478017ea07386fc33a3c7b7b625af78aa86a33991a9a500a7aa216e28632de568f02adefd662ef53a42d#npm:2.7.0", {\
+          "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-0ec1497d1c/0/cache/node-fetch-npm-2.7.0-587d57004e-d76d2f5edb.zip/node_modules/node-fetch/",\
+          "packageDependencies": [\
+            ["node-fetch", "virtual:9c67668db478e95ba4d6a763bc55027eeff0d22eaf59478017ea07386fc33a3c7b7b625af78aa86a33991a9a500a7aa216e28632de568f02adefd662ef53a42d#npm:2.7.0"],\
+            ["@types/encoding", null],\
+            ["encoding", null],\
+            ["whatwg-url", "npm:5.0.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/encoding",\
+            "encoding"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["node-gyp", [\
         ["npm:10.2.0", {\
           "packageLocation": "./.yarn/unplugged/node-gyp-npm-10.2.0-cad1109948/node_modules/node-gyp/",\
@@ -4088,6 +4132,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["once", "npm:1.4.0"],\
             ["wrappy", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["opencage-api-client", [\
+        ["npm:1.0.7", {\
+          "packageLocation": "./.yarn/cache/opencage-api-client-npm-1.0.7-a91bc30738-6cad031408.zip/node_modules/opencage-api-client/",\
+          "packageDependencies": [\
+            ["opencage-api-client", "npm:1.0.7"],\
+            ["cross-fetch", "npm:4.0.0"],\
+            ["dotenv", "npm:16.4.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5017,6 +5072,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["tr46", [\
+        ["npm:0.0.3", {\
+          "packageLocation": "./.yarn/cache/tr46-npm-0.0.3-de53018915-726321c5ea.zip/node_modules/tr46/",\
+          "packageDependencies": [\
+            ["tr46", "npm:0.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["type-check", [\
         ["npm:0.4.0", {\
           "packageLocation": "./.yarn/cache/type-check-npm-0.4.0-60565800ce-ec688ebfc9.zip/node_modules/type-check/",\
@@ -5203,6 +5267,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "stylus",\
             "sugarss",\
             "terser"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["webidl-conversions", [\
+        ["npm:3.0.1", {\
+          "packageLocation": "./.yarn/cache/webidl-conversions-npm-3.0.1-60310f6a2b-c92a0a6ab9.zip/node_modules/webidl-conversions/",\
+          "packageDependencies": [\
+            ["webidl-conversions", "npm:3.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["whatwg-url", [\
+        ["npm:5.0.0", {\
+          "packageLocation": "./.yarn/cache/whatwg-url-npm-5.0.0-374fb45e60-b8daed4ad3.zip/node_modules/whatwg-url/",\
+          "packageDependencies": [\
+            ["whatwg-url", "npm:5.0.0"],\
+            ["tr46", "npm:0.0.3"],\
+            ["webidl-conversions", "npm:3.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\

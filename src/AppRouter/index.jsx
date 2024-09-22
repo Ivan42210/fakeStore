@@ -6,6 +6,8 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthContext";
 import Profile from "../Pages/Profile";
 import Cart from "../Pages/Cart";
+import Footer from "../Components/Footer";
+import SubscribePage from "../Pages/SubscribePage";
 
 
 export default function AppRouter(){
@@ -26,7 +28,9 @@ export default function AppRouter(){
                 <Route path={'/test'} element={<Test/>} />
                 <Route path='/profile/:id' element={token ? <Profile/> : <Navigate to='/' />}/>
                 <Route path='/cart' element={<Cart/>}/>
+                <Route path='/sign-up' element={<SubscribePage/>}/>
             </Routes> 
+            <Footer/>
         </>
     )
 }

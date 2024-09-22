@@ -66,7 +66,7 @@ export const AuthProvider = ({children}) => {
         } catch (error){
             console.error("Failed to fetch cart data", error);
         } finally {
-            setLoading(false);  // Fin du chargement après la récupération du panier
+            setLoading(false);  
         }
     };
 
