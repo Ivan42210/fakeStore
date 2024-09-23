@@ -8,24 +8,41 @@ import Button from '@mui/material/Button';
 
 export default function SignUp(){
 
+    const nameValidation = () =>{
+        const nameRegex = new RegExp("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžæÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u");
+    }
+
+    
+
+
     const style = {
         container: {
-            w: '300px',
+            width: '450px',
             display: 'flex',
             flexDirection: 'column',
             p: 2,
             gap: 2,
-        },
+            position: 'relative'
+        }, subContainer:{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: 2,
+            position: 'relative'
+        },halfInput: {
+            width: '48%'
+        }, fullInput: {
+            width: '100%'
+        }
 
     }
 
     return(
         <>
             <Paper sx={style.container}>
-                <Box>
-                    <TextField placeholder='Lastname'/>
-                    <TextField placeholder='Firstname'/>
-                    <TextField placeholder='Username'/>
+                <Box sx={style.subContainer}>
+                    <TextField placeholder='Lastname' sx={style.halfInput}/>
+                    <TextField placeholder='Firstname' sx={style.halfInput}/>
+                    <TextField placeholder='Username' sx={style.fullInput}/>
                 </Box>
                 <TextField placeholder='Email'/>
                 <TextField placeholder='Password'/>
