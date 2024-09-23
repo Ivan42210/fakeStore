@@ -2,17 +2,25 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { useState } from 'react';
 
 
 
 
 export default function SignUp(){
 
-    const nameValidation = () =>{
-        const nameRegex = new RegExp("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžæÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u");
-    }
+    const [firstname, setFirstname] = useState(null)
+    const [lastname, setLastName] = useState(null)
+    const [email, setEmail] = useState(null)
+    const [password, setPassword] = useState(null)
+    const [number, setNumber] = useState(null)
+    const [street, setStreet] = useState(null)
+    const [city, setCity] = useState(null)
+    const [zipcode, setZipcode] = useState(null)
 
-    
+    const firstNameValidation = (e) => {
+            const nameRegex = new RegExp("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžæÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u");
+    }
 
 
     const style = {
